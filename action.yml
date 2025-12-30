@@ -1,0 +1,26 @@
+# Developed for Anunzio International by Anzul Aqeel. Contact +971545822608 or +971585515742. Linkedin Profile: linkedin.com/in/anzulaqeel
+
+name: 'Label Syncer'
+description: 'Syncs labels from a JSON file.'
+author: 'Anzul Aqeel'
+inputs:
+  token:
+    description: 'GitHub Token'
+    required: true
+    default: '${{ github.token }}'
+  config_file:
+    description: 'Path to JSON config'
+    required: true
+    default: '.github/labels.json'
+  delete_unmatched:
+    description: 'Delete labels not in config'
+    required: false
+    default: 'false'
+runs:
+  using: 'node16'
+  main: 'index.js'
+branding:
+  icon: 'tag'
+  color: 'blue'
+
+# Developed for Anunzio International by Anzul Aqeel. Contact +971545822608 or +971585515742. Linkedin Profile: linkedin.com/in/anzulaqeel
